@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 황연수 - LIVE Responsive </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shotcut-icon" href="./images/shotcut-icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;&display=swap">
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/live.js"></script>
+</head>
+
+<body>
+    <!-- #wrap>header+main+footer -->
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <!-- .lm>h1.logo+nav.pcMenu+nav.mobileMenu -->
+            <div class="lm">
+                <!-- logo -->
+                <h1 class="logo">
+                    <a href="#"><img src="./images/logo.svg" alt="로고"></a>
+                </h1>
+                <!-- menus -->
+                <nav class="pcMenu">
+                    <!-- ul>li*5>a{회사소개} -->
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">레퍼런스</a></li>
+                        <li><a href="#">스튜디오</a></li>
+                        <li><a href="#">Q&amp;A</a></li>
+                        <li><a href="#">문의사항</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobileMenu">
+                    <!-- 햄버거버튼 -->
+                    <!-- span>a>img -->
+                    <span onclick="openNav()">
+                        <a href="#">
+                            <img src="./images/toggle.svg" alt="토글버튼">
+                        </a>
+                    </span>
+                    <!-- 전체메뉴박스 -->
+                    <!-- #myNav.overlay -->
+                    <div id="myNav" class="overlay">
+                        <!-- 닫기버튼 -->
+                        <!-- a.closeBtn>img -->
+                        <a href="#" class="closeBtn" onclick="closeNav()"><img src="./images/close.svg" alt="닫기버튼"></a>
+                        <!-- 모바일 메뉴 -->
+                        <div class="overlay-content">
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">레퍼런스</a></li>
+                                <li><a href="#">스튜디오</a></li>
+                                <li><a href="#">Q&amp;A</a></li>
+                                <li><a href="#">문의사항</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!-- .centerImg>a>img -->
+            <div class="centerImg">
+                <a href="#">
+                    <img src="./images/centerImg.png" alt="메인이미지">
+                </a>
+            </div>
+        </main>
+        <footer>
+            <!-- .mainBtn>a.btn>img -->
+            <div class="mainBtn">
+                <a href="#" class="btn">
+                    <img src="./images/bottomBtn.svg" alt="하단버튼">
+                </a>
+            </div>
+        </footer> 
+    </div>
+    <!-- #popup>span.close>img -->
+    <div id="popup">
+        <span class="close">
+           <a href="#"> <img src="./images/close.svg" alt="닫기버튼"></a>
+        </span>
+    </div>
+    <div class="bg"></div>
+</body>
+</html>

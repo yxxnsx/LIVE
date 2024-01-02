@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg.svg")no-repeat center/cover;
+    /* background: linear-gradient(90deg, #0041A4 0%, #000959 100.91%); */
+    font-family: 'Inter';
+}
+
+#wrap {
+    width: 100%;
+}
+
+#wrap header {
+    /* width: 95%; */
+    width: 90%;
+    height: 10vh;
+    margin: 0 auto;
+}
+
+#wrap header .lm {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* logo */
+#wrap header .lm h1.logo img {
+    margin-top: 40px;
+    width: 55px;
+}
+
+/* pc menu */
+#wrap header .lm .pcMenu {
+    margin-top: 50px;
+}
+
+#wrap header .lm .pcMenu ul {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#wrap header .lm .pcMenu ul li a {
+    font-weight: 500;
+    color: #fff;
+    opacity: 1;
+}
+
+#wrap header .lm .pcMenu ul li a:hover,
+#wrap header .lm .pcMenu ul li a:focus {
+    opacity: 0.7;
+}
+
+/* mobile menu */
+#wrap header .lm .mobileMenu {
+    display: none;
+}
+
+/* main */
+#wrap main {
+    width: 100%;
+    height: 80vh;
+}
+
+#wrap main .centerImg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#wrap main .centerImg img {
+    max-width: 100%;
+}
+
+#wrap footer {
+    /* width: 95%; */
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    position: relative;
+}
+
+#wrap footer .btn {
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+}
+
+/* popup */
+#popup {
+    display: none;
+    position: absolute;
+    z-index: 9999999999999;
+    right: 42px;
+    bottom: 40px;
+    width: 400px;
+    height: 425px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: url("../images/popup.jpg")no-repeat center/cover;
+}
+
+#popup .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+
+}
+
+#popup .close:hover {
+    opacity: 0.5;
+}
+
+/* bg */
+.bg {
+    display: none; /* 가려짐 */    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 70% 투명도 */    
+    z-index: 8;
+}
+
+/* mobile */
+@media(max-width:720px) {
+
+    /* pc메뉴 가려줌 */
+    #wrap header .lm .pcMenu {
+        display: none;
+    }
+
+    /* mobile 메뉴 보여줌 */
+    #wrap header .lm .mobileMenu {
+        display: block;
+    }
+
+    /* 토글버튼 */
+    #wrap header .lm .mobileMenu span {
+        display: block;
+        position: absolute;
+        top: 45px;
+        /* right: 14px; */
+        right: 34px;
+    }
+
+    #wrap header .lm .mobileMenu span img:hover {
+        opacity: 0.7;
+    }
+
+    /* 모바일 메뉴 전체박스 */
+    #wrap header .lm .mobileMenu .overlay {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+        transition: .1s;
+    }
+
+    /* 닫기버튼 */
+    #wrap header .lm .mobileMenu .overlay .closeBtn {
+        position: absolute;
+        top: 38px;
+        /* right: 10px; */
+        right: 30px;
+    }
+
+    /* 모바일메뉴 */
+    #wrap header .lm .mobileMenu .overlay .overlay-content {
+        position: relative;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .overlay-content ul li a {
+        padding: 20px;
+        font-size: 23px;
+        color: #fff;
+        display: block;
+        transition: .3s;
+    }
+
+    .overlay-content ul li a:hover,
+    .overlay-content ul li a:focus {
+        opacity: 0.5;
+    }
+
+    /* popup */
+    #popup {
+        max-width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
